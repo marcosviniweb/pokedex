@@ -28,6 +28,13 @@ export class SidebarComponent implements OnInit {
         this.types[i] =  this.setData[i].type[0];
       }
       this.alltypes = [...new Set(this.types)];
+      this.alltypes.sort(function compare(a: any, b: any) {
+        if (a < b)
+          return -1;
+        if (a > b)
+          return 1;
+        return 0;
+      });
     })
   }
 
