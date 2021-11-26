@@ -1,0 +1,64 @@
+<div class="container">
+
+  <div class="row search pc-tablet">
+    <div class="col-7">
+      <div class="input-group">
+
+        <input id="search-input" #input (keyup)="search(input.value)" placeholder="Pesquisar por nome ou número"
+          type="text" class="form-control">
+        <img class="img_search" src="../../../assets/images/search.svg">
+      </div>
+
+    </div>
+
+    <div class="col-5 ">
+      <div class="row ">
+        <div class="col-7">
+          <p>ordenar por</p>
+        </div>
+        <div class="col ">
+          <select class="form-select" #t (change)="changeOrder(t.value)" aria-label="Default select example">
+            <option value="smallerNumber" selected>Menor número primeiro</option>
+            <option value="higherNumber">Maior número primeiro</option>
+            <option value="nameAsc">ordenar por nome (ascendente) </option>
+            <option value="nameDesc">ordenar por nome (descendente) </option>
+          </select>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="search mobile">
+    <div class="row ">
+      <div class="input-group">
+
+        <input id="search-input" #input (keyup)="search(input.value)" placeholder="Pesquisar por nome ou número"
+          type="text" class="form-control">
+        <img class="img_search" src="../../../assets/images/search.svg">
+      </div>
+
+    </div>
+
+
+    <div class="row orderby">
+      <div class="col">
+        <span>ordenar por</span>
+      </div>
+      <div class="col ">
+        <select class="form-select" #t (change)="changeOrder(t.value)" aria-label="Default select example">
+          <option value="smallerNumber" selected>Menor número primeiro</option>
+          <option value="higherNumber">Maior número primeiro</option>
+          <option value="nameAsc">ordenar por nome (ascendente) </option>
+          <option value="nameDesc">ordenar por nome (descendente) </option>
+        </select>
+      </div>
+
+
+
+    </div>
+
+
+  </div>

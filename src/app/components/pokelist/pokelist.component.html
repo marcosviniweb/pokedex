@@ -1,0 +1,39 @@
+
+<div class="container">
+
+  <section >
+ <div class="grid column">
+    <div class = "list" *ngFor="let pokemons of data" (mouseover) = "heartId(pokemons.national_number)  " (mouseout) = "showHeartRegular = false">
+  
+      <div class="pokemom" (click) = "fav(pokemons.national_number)">
+        <img src="{{pokemons.sprites.animated}}" >
+      </div>
+      <p class="number">N° {{pokemons.national_number}}</p>
+      <p class="name">{{pokemons.name}}</p>
+      <div class="row" >
+        <div class="col-4 type" *ngFor="let types of pokemons.type">
+          <button type="button" id="{{types}}" class="btn btn-primary ">{{types}}</button>
+        </div>
+
+      </div>
+
+      <div class = "heart">
+        <img *ngIf = "showHeartRegular == pokemons.national_number" class = "img_heart" src = "../../../assets/images/heart-regular.svg" height="20px"/>
+        <div *ngFor = "let heartsolid of favorite">
+        <img *ngIf = "heartsolid == pokemons.national_number" class = "img_heart" src = "../../../assets/images/heart-solid.svg" height="20px"/>
+         </div>
+        </div>
+    </div>
+
+
+ 
+  </div>
+  <div class="box-more">
+    <button (click)="showMore()" class="btn btn-outline-danger more" type="buttom">Ver Mais</button>
+    </div>
+
+  </section>
+
+ 
+
+</div>

@@ -1,0 +1,111 @@
+@import '../../config-scss/media_mobile.scss';
+@import '../../config-scss/media_pc_tablet.scss';
+.grid {
+    display: grid;
+}
+
+
+
+
+.box-more{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.type{
+  margin-right: 5px !important;
+}
+.more{
+  border:solid 1px #f25555 !important;
+  width: 200px;
+  color:#f25555;
+  background-color: white;
+  
+}
+
+  button[id*="Grass"] {
+    background-color: #78C84F;
+    color: white;
+  }
+  button[id*="Poison"] {
+    background-color: #A040A1;
+    color: white;
+  }
+  button[id*="Fire"] {
+    background-color: #EE7F33;
+    color: white;
+  }
+  button[id*="Normal"] {
+    background-color: #A9A778;
+    color: white;
+  }
+  button[id*="Water"] {
+    background-color: #6890F0;
+    color: white;
+  }
+  button[id*="Ice"] {
+    background-color: #6890F0;
+    color: white;
+  }
+  button[id*="Ground"] {
+    background-color: #6890F0;
+    color: white;
+  }
+  button[id*="Flying"] {
+    background-color: #A790EF;
+    color: white;
+  }
+  button[id*="Bug"] {
+    background-color: #A8B821;
+    color: white;
+  }
+  button[id*="Rock"] {
+    background-color: #A8B821
+  }
+  button[id*="Dragon"] {
+    background-color: #705797;
+    color: white;
+  }
+  button[id*="Dark"] {
+    background-color: #6F5848;
+    color: white;
+  }
+  button[id*="Steel"] {
+    background-color: #B8B8D0
+  }
+  button[id*="Fairy"] {
+    background-color: #F4C8E2
+  }
+  button[id*="Psychic"] {
+    background-color: #E95587;
+    color: white;
+  }
+  button[id*="Electric"] {
+    background-color: #F8CF32;
+    color: white;
+  }
+  button[id*="Fighting"] {
+    background-color: #C03228;
+    color: white;
+  }
+
+
+
+  /* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 10px;
+  }

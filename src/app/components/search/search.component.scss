@@ -1,0 +1,176 @@
+.container-top{
+    height: 20px;
+}
+
+.row{
+  
+    
+}
+
+.search{
+    padding: 20px;
+    
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+@media screen and  (min-width:1401px)  {
+       
+    .search{
+        margin-left: 30px;
+    }
+    .input-group{
+        width: 80%;
+    }
+    .mobile{
+       display: none;
+    }
+  }
+
+  @media screen and  (max-width:1400px) and (min-width:1331px)  {
+      
+    .pc-tablet{
+        margin-left: 30px;
+        width: 1200px;
+    }
+    .mobile{
+        display: none;
+        text-align: left !important;
+     }
+
+     .orderby{
+       
+       margin-bottom: 20px;
+    }
+    .input-group{
+        width: 100%;
+    }
+   
+
+  }
+
+  @media screen and  (max-width:1330px) and (min-width:1201px)  {
+      
+    .pc-tablet{
+        margin-left: 30px;
+        width: 1000px;
+    }
+    .mobile{
+        display: none;
+        text-align: left !important;
+     }
+
+     .orderby{
+       
+       margin-bottom: 20px;
+    }
+    .input-group{
+        width: 100%;
+    }
+   
+
+  }
+
+  @media screen and  (max-width:1200px) and (min-width:1101px)  {
+      
+    .pc-tablet{
+       
+        width: 1000px;
+    }
+    .mobile{
+        display: none;
+        text-align: left !important;
+     }
+
+     .orderby{
+       
+       margin-bottom: 20px;
+    }
+    .input-group{
+        width: 100%;
+    }
+   
+
+  }
+
+  @media screen and  (max-width:1100px) and (min-width:1001px)  {
+      
+    .pc-tablet{
+       
+        width: 900px;
+    }
+    .mobile{
+        display: none;
+        text-align: left !important;
+     }
+
+     .orderby{
+       
+       margin-bottom: 20px;
+    }
+    .input-group{
+        width: 100%;
+    }
+   
+
+  }
+
+
+  @media screen and  (max-width:1000px)  {
+         
+    .search{
+       
+    }
+  .mobile{
+   
+  }
+    .orderby{
+        margin-top: 20px;
+       
+    }
+    span{
+        margin-left: 10px;
+    }
+    .form-select{
+        margin-left: -20px;
+        width: 110%;
+    }
+    .input-group{
+        width: 100%;
+    }
+    .pc-tablet{
+       display: none;
+    }
+  }
+
+
+
+.input-group{
+   
+    border-radius: 10px;
+}
+
+img.img_search{
+    margin-left: -30px !important;
+    z-index: 9;
+   
+}
+
+.form-control{
+    border-radius: 50px !important;
+    background-color: #f2f2f2  !important;
+}
+
+p{
+    text-align: right !important;
+    margin-top: 5px !important;
+   
+}
+
+.form-select{
+    font-size: 12px;
+    border-radius: 50px !important;
+    background-color: #f2f2f2  !important;
+    color:#f27d55 !important; 
+    border:solid 1px #f27d55 !important; 
+}

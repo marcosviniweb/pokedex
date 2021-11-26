@@ -1,0 +1,17 @@
+<div class = "container">
+  <p>Filtrar por tipo</p>
+</div>
+
+<div class = "container" >
+<div style = "display: inline;" *ngFor="let alltype of alltypes">
+  <button type="button" (click)="search(alltype)" class="btn btn-outline-danger">{{alltype}}</button>
+</div>
+  <p class = "filter-fav" >Filtrar Favoritos </p>
+<!-- Rounded switch -->
+<label class="switch">
+  <input type="checkbox" (click)="switchClicked($event)">
+  <span class="slider round"></span>
+</label>
+
+</div>
+

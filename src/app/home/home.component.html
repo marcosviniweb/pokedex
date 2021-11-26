@@ -1,0 +1,20 @@
+
+<!-- Header -->
+<app-header></app-header>
+<!-- Search -->
+<app-search (emmitSearch)="list.SearchNameID($event)" (emmitchange)="list.orderBy($event)" > </app-search>
+
+
+<div class = "container">
+    <div class = "row">
+           <div class =  "col-3 sidebar">
+               <!-- Sidebar -->
+            <app-sidebar (emmitSearch)="list.SearchType($event)" (emmitSwitch)="list.ChangeFav($event)"></app-sidebar>
+           </div>
+           <div class = "col-9 pokelist">
+                <app-pokelist #list></app-pokelist>
+           </div>
+    </div>
+
+
+</div>
