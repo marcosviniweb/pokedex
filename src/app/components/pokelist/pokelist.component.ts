@@ -1,3 +1,4 @@
+   
 import { Component, OnInit } from '@angular/core';
 import { ApiPokeService } from 'src/app/services/api-poke.service';
 
@@ -18,10 +19,11 @@ export class PokelistComponent implements OnInit {
   currentFav: string | null;
   showHeartRegular: any;
   showHeartSolid: any;
+  divShowMore = true;
   constructor(
     private apiPokeService: ApiPokeService
   ) {
-   // this.showHeart = false;
+    // this.showHeart = false;
     this.currentFav = localStorage.getItem("fav");
   }
 
@@ -65,6 +67,7 @@ export class PokelistComponent implements OnInit {
       });
       this.data = filter;
     }
+    this.divShowMore = false;
   }
 
   public SearchType(value: string) {//Pesquisar por Tipo
@@ -75,21 +78,20 @@ export class PokelistComponent implements OnInit {
       return !res.type[0].indexOf(value)
     });
     this.data = filter;
-   
+    this.divShowMore = false;
   }
 
-  heartId(id:number){
-    this.showHeartSolid  = this.favorite.filter((res: any) => {
+  heartId(id: number) {
+    this.showHeartSolid = this.favorite.filter((res: any) => {
       return !res.indexOf(id)
-      
+
     })
-    
-    if(this.showHeartSolid.length == 0 ){
+
+    if (this.showHeartSolid.length == 0) {
       this.showHeartRegular = id;
-      
+
     }
-    
-    
+
   }
 
   public fav(value: number) {
@@ -105,16 +107,16 @@ export class PokelistComponent implements OnInit {
     }
     localStorage.setItem("fav", JSON.stringify(this.favorite))
     this.showHeartRegular = 0;
-   
   }
 
   public ChangeFav(bool: any) {
     if (bool == true) {
       let filteredData = this.setData.filter((res: any) => this.favorite.includes(res.national_number));
       this.data = filteredData;
-     
+      this.divShowMore = false;
     } else {
       this.data = this.setData.slice(0, this.sizeData);
+      this.divShowMore = true;
     }
   }
 
@@ -127,7 +129,7 @@ export class PokelistComponent implements OnInit {
           return 1;
         return 0;
       });
-    }else if (value === 'nameDesc'){
+    } else if (value === 'nameDesc') {
       this.data.sort(function compare(a: any, b: any) {
         if (a.name > b.name)
           return -1;
@@ -135,7 +137,7 @@ export class PokelistComponent implements OnInit {
           return 1;
         return 0;
       });
-    }else if(value === 'smallerNumber'){
+    } else if (value === 'smallerNumber') {
       this.data.sort(function compare(a: any, b: any) {
         if (a.national_number < b.national_number)
           return -1;
@@ -143,7 +145,7 @@ export class PokelistComponent implements OnInit {
           return 1;
         return 0;
       });
-    }else if(value === 'higherNumber'){
+    } else if (value === 'higherNumber') {
       this.data.sort(function compare(a: any, b: any) {
         if (a.national_number > b.national_number)
           return -1;
@@ -155,9 +157,9 @@ export class PokelistComponent implements OnInit {
 
   }
 
-public showMore(){
-  this.sizeData += 10;
-  this.data = this.setData.slice(0, this.sizeData);
-}
+  public showMore() {
+    this.sizeData += 10;
+    this.data = this.setData.slice(0, this.sizeData);
+  }
 
 }
