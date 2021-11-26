@@ -75,7 +75,7 @@ export class PokelistComponent implements OnInit {
       return !res.type[0].indexOf(value)
     });
     this.data = filter;
-    console.log(this.data)
+   
   }
 
   heartId(id:number){
@@ -88,7 +88,7 @@ export class PokelistComponent implements OnInit {
       this.showHeartRegular = id;
       
     }
-    console.log(this.showHeartRegular)
+    
     
   }
 
@@ -105,14 +105,14 @@ export class PokelistComponent implements OnInit {
     }
     localStorage.setItem("fav", JSON.stringify(this.favorite))
     this.showHeartRegular = 0;
-    console.log(this.favorite)
+   
   }
 
   public ChangeFav(bool: any) {
     if (bool == true) {
       let filteredData = this.setData.filter((res: any) => this.favorite.includes(res.national_number));
       this.data = filteredData;
-      console.log(this.data)
+     
     } else {
       this.data = this.setData.slice(0, this.sizeData);
     }
