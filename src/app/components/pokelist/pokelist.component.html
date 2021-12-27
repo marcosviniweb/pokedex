@@ -3,7 +3,7 @@
 
   <section >
  <div class="grid column">
-    <div class = "list" *ngFor="let pokemons of data" (mouseover) = "heartId(pokemons.national_number)  " (mouseout) = "showHeartRegular = false">
+    <div class = "list" *ngFor="let pokemons of setData" (mouseover) = "heartId(pokemons.national_number)  " (mouseout) = "showHeartRegular = false">
   
       <div class="pokemom" (click) = "fav(pokemons.national_number)">
         <img src="{{pokemons.sprites.animated}}" >
